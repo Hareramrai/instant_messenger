@@ -1,0 +1,7 @@
+<%= simple_form_for(@user, html: { class: 'sign-up' }) do |form| %>
+  <%= form.input :username, label: 'Username', error: 'Username is mandatory and unique, please specify one' %>
+  <%= form.association :dialect, error: 'Dialect is needed for translation' %>
+  <div class="row text-center">
+    <%= form.submit "Join Now", class: 'btn btn-primary btn-lg' %>
+  </div>
+<% end %>

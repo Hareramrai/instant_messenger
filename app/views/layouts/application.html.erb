@@ -20,9 +20,10 @@
     <header>
       <%= render 'layouts/navigation' %>
     </header>
-    <main role="main">
-       <%= yield %>
-    </main>
+    <%= render 'layouts/flash_messages' %>
+    <div class="container">
+      <%= yield %>
+    </div>
     <%= javascript_include_tag 'application' %>
   </body>
 </html>
