@@ -1,3 +1,4 @@
+require 'translator'
 class Message < ApplicationRecord
   belongs_to :user
   belongs_to :dialect
