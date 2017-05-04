@@ -37,6 +37,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'simple_form'
 gem 'gravatar_image_tag'
 gem 'rest-client'
+gem 'redis'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
