@@ -43,9 +43,9 @@ RSpec.describe UsersController, type: :controller do
         expect(session[:user_id]).to eq(assigns(:user).id)
       end
 
-      it "redirects to the root_path" do
+      it "redirects to the messages path" do
         post :create, params: {user: valid_attributes}
-        expect(response).to redirect_to(root_path)
+        expect(response).to redirect_to(messages_path)
       end
     end
 
