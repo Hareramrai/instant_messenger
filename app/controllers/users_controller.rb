@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         session[:user_id] = @user.id
-        format.html { redirect_to root_path, notice: 'You have joined successfully.' }
+        format.html { redirect_to messages_path, notice: 'You have joined successfully.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -35,6 +35,6 @@ class UsersController < ApplicationController
     end
 
     def validate_session
-      redirect_to root_url, alert: "Already singn up!" if current_user
+      redirect_to messages_path, alert: "Already singn up!" if current_user
     end
 end

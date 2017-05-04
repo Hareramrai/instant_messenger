@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h3>Chat with your friends</h3>
+</div>
+<!-- Chat -->
+<div class="row-fluid">
+  <div class="span12">
+    <div class="jumbotron pull-left">
+      <div class="chatbox">
+        <div id="tchat">
+          <%= render partial: "message", collection: @messages %>
+        </div>
+        <div class="user-list">
+          <% @users.each do |user|%>
+            <div class="user-row-line">
+              <div class="user-image">
+                <%= gravatar_image_for user%>
+              </div>
+              <div class="user-name"> 
+                <%= user.username %>        
+              </div>
+              <div class="user-status" id="user-status-<%=user.id%>">
+              </div>  
+            </div>
+          <% end%>
+        </div>  
+      </div>
+    </div>
+    <%= render 'form', message: @message %>
+  </div>
+</div>

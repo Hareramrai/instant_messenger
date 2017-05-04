@@ -1,0 +1,23 @@
+<div class="line">
+  <div class="col-md-1">
+    <%= gravatar_image_for message.user%>
+  </div>
+  <div class="col-md-11">
+    <div class="row message-body">
+      <span>
+        <b><%=message.body.truncate(70, omission: '... (continued)') %></b>
+      </span>
+      <span class="">
+        <%= image_tag message.translator_image, class: "pull-right" %>
+      </span>
+    </div>
+    <div class="row">
+      <span class="label label-info pull-left">
+        <%= message.username %>
+      </span>
+      <span class="label label-success pull-right">
+        On <%= l message.created_at %>
+      </span>
+    </div>
+  </div>      
+</div>

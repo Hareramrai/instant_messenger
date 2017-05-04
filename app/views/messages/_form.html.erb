@@ -1,0 +1,4 @@
+<%= form_for @message, :html => { :remote => true, :class => 'form-horizontal form-inline', :align => "center" } do |f| %>   
+  <%= f.text_field :body, class: 'form-control message-input', autocomplete: "off", placeholder: "Type your Message"  %>      
+  <%= f.submit "Send Message", :class => 'btn btn-primary' %>  
+<% end%>
